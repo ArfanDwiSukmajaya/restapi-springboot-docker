@@ -1,0 +1,23 @@
+version : '3.8'
+services:
+  app:
+    container_name: springboot-restfull-api
+    image: springboot-restfull-api:0.0.1
+    ports:
+      - 7070:7070
+    environment:
+      DATABASE_USERNAME : java
+      DATABASE_PASSWORD : root
+      DATABASE_URL : jdbc:mysql://mysql_docker:3306/db_crud
+
+  db:
+    container_name: mysql_docker
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_crud
+      MYSQL_USER: java
+      MYSQL_PASSWORD: root
+    ports:
+      - 3306:3306
