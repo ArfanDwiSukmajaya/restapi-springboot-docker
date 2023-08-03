@@ -1,0 +1,5 @@
+com/example/backend/repository/RegionRepository.class
+com/example/backend/controller/RegionController.class
+com/example/backend/model/Region.class
+com/example/backend/service/RegionService.class
+com/example/backend/BackendApplication.class
